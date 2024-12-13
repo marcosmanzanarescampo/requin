@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.scene{
+    background-color: cyan;
+    height: 200px;
+    position: relative;
+}
+
+
+
+.bateau{
+
+    width: 200px; height: 100%;    
+    left: 0;
+    top: 50px;
+    position: absolute;
+    opacity: 1;
+    animation: avancementBateau 5s linear infinite;
+
+}
+
+.blood{
+    width: 200px; height: 100%;    
+    left: 1000px;
+    top: 50px;
+    opacity: 0;
+    animation: aparaitreBlood 2s linear infinite; 
+}
+
+.requin{
+
+    width: 300px; height: 100%;
+    left: 1000px;
+    top: 50px;
+    position: absolute;
+    animation: avancementRequin 5s linear infinite reverse;
+    
+}
+
+
+@keyframes avancementBateau{
+    0% {left: 0px;}    
+    99%{left: 1000px;}
+    100%{opacity: 0;}
+}
+
+@keyframes aparaitreBlood{
+    0% {opacity: 0;}
+    99%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes avancementRequin{
+    0% {left: 1000px;}
+    100% {left: 0;}
+}
